@@ -9,18 +9,28 @@ import News from "./components/news/news";
 import Settings from "./components/settings/settings";
 import { BrowserRouter, Route } from "react-router-dom";
 
-function App() {
+function App({ postsData, dialogsData, messagesData }) {
   return (
       <BrowserRouter>
         <div className="app">
             <Header />
             <Sidebar/>
             <div className="app__content">
-                <Route path="/dialogs" component={Dialogs} />
-                <Route path="/profile" component={Profile} />
-                <Route path="/news" component={News} />
-                <Route path="/music" component={Music} />
-                <Route path="/settings" component={Settings} />
+                <Route path="/dialogs">
+                    <Dialogs dialogsData={dialogsData} messagesData={messagesData}/>
+                </Route>
+                <Route path="/profile">
+                    <Profile postsData={postsData}/>
+                </Route>
+                <Route path="/news">
+                    <News />
+                </Route>
+                <Route path="/music">
+                    <Music />
+                </Route>
+                <Route path="/settings">
+                    <Settings />
+                </Route>
             </div>
         </div>
       </BrowserRouter>
