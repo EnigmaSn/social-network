@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import s from './profile.module.css'
 import MyPosts from "./my-posts/my-posts";
 import ProfileInfo from "./profile-info/profile-info";
 
-const Profile = ({ postsData }) => {
+export default class Profile extends Component {
+    render() {
+        const { postsData } = this.props.data;
 
-    return (
-        <div className={s.profile}>
-            <ProfileInfo />
-            <MyPosts postsData={postsData}/>
-        </div>
-    );
+        return (
+            <div className={s.profile}>
+                <ProfileInfo />
+                <MyPosts postsData={postsData}/>
+            </div>
+        );
+    }
+
 }
-
-export default Profile;
