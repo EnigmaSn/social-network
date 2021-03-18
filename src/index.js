@@ -9,9 +9,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App
         state={state}
-        // postsData={postsData}
-        // dialogsData={dialogsData}
-        // messagesData={messagesData}
     />
   </React.StrictMode>,
   document.getElementById('root')

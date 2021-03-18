@@ -40,19 +40,37 @@ const state = {
         messagesData: [
             {
                 id: 1,
-                message: 'text1'
+                message: 'text1',
+                user: 1
             },
             {
                 id: 2,
-                message: 'text2'
+                message: 'text2',
+                user: 2
             },
             {
                 id: 3,
-                message: 'text3'
+                message: 'text3',
+                user: 1
             },
         ],
     },
-
+    sidebar: {
+        friendsData: [
+            {
+                id: 2,
+                name: 'Misha'
+            },
+            {
+                id: 3,
+                name: 'Alex'
+            },
+            {
+                id: 4,
+                name: 'Sacha'
+            }
+        ]
+    }
 };
 
 export default state;

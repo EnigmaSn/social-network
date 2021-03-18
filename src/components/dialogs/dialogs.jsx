@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import s from './dialogs.module.css';
 import Dialog from "./dialog/dialog";
 import Message from "./message/message";
+import NewMessage from "./message/new-message/new-message";
 
 export default class Dialogs extends Component {
     render() {
@@ -21,6 +22,7 @@ export default class Dialogs extends Component {
                 </div>
                 <div className={s.messages}>
                     { messageElements }
+                    <NewMessage />
                 </div>
             </div>
         );

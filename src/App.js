@@ -12,13 +12,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 export default class App extends Component {
 
     render() {
-        // const { dialogsData, messagesData } = this.props.state.messagePage;
-        // const { postsData } = this.props.state.profilePage;
         return (
             <BrowserRouter>
                 <div className="app">
                     <Header />
-                    <Sidebar/>
+                    <Sidebar data={this.props.state.sidebar} />
                     <div className="app__content">
                         <Route path="/dialogs">
                             <Dialogs data={this.props.state.messagePage} />

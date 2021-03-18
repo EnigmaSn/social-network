@@ -1,30 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import s from  './sidebar.module.css';
 import {NavLink} from 'react-router-dom';
+import Friends from "./friends/friends";
+import Nav from "./nav/nav";
 
 
-const Sidebar = () => {
-    return (
-        <nav className={s.sidebar}>
-            <ul>
-                <li className={ `${s.item} ${s.active}` }>
-                    <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
-                </li>
-                <li className={s.item}>
-                    <NavLink to="/dialogs" activeClassName={s.activeLink}>Messages</NavLink>
-                </li>
-                <li className={s.item}>
-                    <NavLink to="/news" activeClassName={s.activeLink}>News</NavLink>
-                </li>
-                <li className={s.item}>
-                    <NavLink to="/music" activeClassName={s.activeLink}>Music</NavLink>
-                </li>
-                <li className={s.item}>
-                    <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
-                </li>
-            </ul>
-        </nav>
-    );
+export default class Sidebar extends Component {
+    render() {
+        const { friendsData } = this.props.data;
+        return (
+            <div className={s.sidebar}>
+                <Nav />
+                <Friends friendsData={friendsData}/>
+            </div>
+        );
+    }
+
 }
 
-export default Sidebar;

@@ -11,7 +11,7 @@ const MyPosts = ({postsData}) => {
                 <Post
                     message={post.message}
                     likesCount={post.likesCount}
-                    id={post.id}
+                    key={post.id}
                 />);
         });
 

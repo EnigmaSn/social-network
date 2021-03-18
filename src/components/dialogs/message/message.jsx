@@ -1,9 +1,15 @@
 import React from 'react';
 import s from './message.module.css';
 
-const Message = ({text}) => {
+const Message = ({text, user, id}) => {
     return (
-        <div className={s.message}>{text}</div>
+        <div>
+            <div className={s.message}>
+                {text}
+            </div>
+
+        </div>
+
     );
 };
 
